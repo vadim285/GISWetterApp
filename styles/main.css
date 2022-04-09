@@ -1,7 +1,70 @@
 
-/*ID*/
+:root{
+    --my-border-color:rgba(0, 255, 255, 0.591);
+    --my_headline-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --mynormal-font-family:Arial, Helvetica, sans-serif;
+}
 #headline{
-    background-color: blue;
+    
+    text-align: left;
+    
+    
+}
+#suche{
+    position: relative;
+    bottom: 2px;
     text-align: center;
-    text-rendering: inherit;
+    font-family: var(--mynormal-font-family)
+}
+h1, span {
+    font-family: var(--my_headline-font-family)
+}
+.rahmen{
+    background-color: var(--my-border-color);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.button-group{
+    
+    text-align: center;
+    align-self: center;
+}
+a.Buttons {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    
+    text-decoration: none;
+    color: initial;
+    font-size: 28px;
+    border: 0%;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom:10px;
+    background-color:var(--my-border-color);
+    border-style: solid;
+    border-color: white;
+
+    transition: text-decoration 1s ;
+    font-family: var(--mynormal-font-family)
+
+
+}
+a.Buttons::first-letter{
+    font-size: 30px;
+    color: blue;
+}
+a.Buttons:hover{
+    text-decoration: underline;
+}
+body{
+   background-color:rgba(0, 255, 255, 0.591);
+}
+@media (mid-width: 50em){
+    body {
+        display: inline;
+    }
 }
