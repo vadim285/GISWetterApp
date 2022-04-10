@@ -3,6 +3,10 @@
     --my-border-color:rgba(0, 255, 255, 0.591);
     --my_headline-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --mynormal-font-family:Arial, Helvetica, sans-serif;
+    --mybluebackground-color:rgba(68, 68, 236, 0.804);
+}
+html{
+    font-family: var(--mynormal-font-family);
 }
 #headline{
     
@@ -20,16 +24,18 @@ h1, span {
     font-family: var(--my_headline-font-family)
 }
 .rahmen{
-    background-color: var(--my-border-color);
+    background-color: var(--mybluebackground-color);
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin-top: -23px;
+    z-index: -20;
+    
 }
 
 .button-group{
     
     text-align: center;
-    align-self: center;
+    background-color: var(--mybluebackground-color);
+    
 }
 a.Buttons {
     -webkit-appearance: button;
@@ -44,21 +50,53 @@ a.Buttons {
     margin: 0%;
     padding-top: 10px;
     padding-bottom:10px;
-    background-color:var(--my-border-color);
+    background-color:var(--mybluebackground-color);
     border-style: solid;
     border-color: white;
 
     transition: text-decoration 1s ;
     font-family: var(--mynormal-font-family)
 
-
+    
+}
+a{
+    text-decoration: none;
+    transition: text-decoration 1s ;
+    color: initial;
 }
 a.Buttons::first-letter{
     font-size: 30px;
-    color: blue;
+    color: white;
 }
-a.Buttons:hover{
+a.Buttons:hover , a:hover{
     text-decoration: underline;
+}
+footer{
+    display:block;
+    text-align: center;
+    background-color: var(--mybluebackground-color);
+}
+.links{
+    font-size: 22px;
+    line-height: 1.3em;
+    padding-bottom: 20px!important;
+    display: block;
+    text-align: center;
+    font-family: var(--mynormal-font-family);
+}
+footer a{
+    color: black;
+    text-decoration: none;
+    font-family: var(--mynormal-font-family);
+}
+ul.list-links, li{
+    
+    display: inline-block;
+
+}
+
+.social-follow{
+    width: 8.3333%!important;
 }
 body{
    background-color:rgba(0, 255, 255, 0.591);
