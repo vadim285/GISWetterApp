@@ -4,6 +4,7 @@
     --my_headline-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --mynormal-font-family:Arial, Helvetica, sans-serif;
     --mybluebackground-color:rgba(68, 68, 236, 0.804);
+    --mygenericcolor:rgba(0, 255, 255, 0.591);
 }
 html{
     font-family: var(--mynormal-font-family);
@@ -32,7 +33,7 @@ h1, span {
 }
 
 .button-group{
-    
+    margin-top: -8px;
     text-align: center;
     background-color: var(--mybluebackground-color);
     
@@ -50,9 +51,6 @@ a.Buttons {
     margin: 0%;
     padding-top: 10px;
     padding-bottom:10px;
-    background-color:var(--mybluebackground-color);
-    border-style: solid;
-    border-color: white;
 
     transition: text-decoration 1s ;
     font-family: var(--mynormal-font-family)
