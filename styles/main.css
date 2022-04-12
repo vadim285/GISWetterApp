@@ -52,14 +52,14 @@ a.Buttons {
     padding-top: 10px;
     padding-bottom:10px;
 
-    transition: text-decoration 1s ;
+    transition: color ;
     font-family: var(--mynormal-font-family)
 
     
 }
 a{
     text-decoration: none;
-    transition: text-decoration 1s ;
+    transition: text-decoration ;
     color: initial;
 }
 a.Buttons::first-letter{
@@ -67,7 +67,7 @@ a.Buttons::first-letter{
     color: white;
 }
 a.Buttons:hover , a:hover{
-    text-decoration: underline;
+    color: White;
 }
 footer{
     display:block;
@@ -88,7 +88,6 @@ footer a{
     font-family: var(--mynormal-font-family);
 }
 ul.list-links, li{
-    
     display: inline-block;
 
 }
