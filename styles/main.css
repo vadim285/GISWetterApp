@@ -9,11 +9,26 @@
 html{
     font-family: var(--mynormal-font-family);
 }
+.description{
+    text-transform: capitalize;
+}
+main{
+    width: auto;
+    height: 240px;
+}
+.submit{
+    position:relative;
+    bottom:2px;
+}
 #headline{
     
     text-align: left;
     
     
+}
+.temp{
+    font-family: inherit;
+    font-size: 28px;
 }
 #suche{
     position: relative;
@@ -34,6 +49,7 @@ h1, span {
 
 .button-group{
     margin-top: -8px;
+    margin-bottom: -8px;
     text-align: center;
     background-color: var(--mybluebackground-color);
     
@@ -87,6 +103,7 @@ footer a{
     text-decoration: none;
     font-family: var(--mynormal-font-family);
 }
+
 ul.list-links, li{
     display: inline-block;
 
@@ -98,6 +115,7 @@ ul.list-links, li{
 body{
    background-color:rgba(0, 255, 255, 0.591);
 }
+
 @media (mid-width: 50em){
     body {
         display: inline;

@@ -9,14 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap" rel="stylesheet">
-    <scrips src="js/scripts.js"defer></scrips>
+    <script src="js/scripts.js"defer></script>
     <title>WetterClone</title>
 </head>
 <body>
     <header>
         <div class="rahmen">
             <h1 id="headline"> <span> Wetter.com-Clone </span></h1>
-        <label id="suche">Ort suchen <input type="text"></label>
+        <label id="suche">Ort suchen <input type="text"class="searchbar"></label>
+        <button class="submit"type="submit">Eingabe</button>
         <hr class="tr0">
         </div>
         <div class="button-group">
@@ -26,13 +27,22 @@
                 <a href="News_u_videos.html" target=" self" class="Buttons">News u. Videos</a>
                 <a href="reisen.html" target="self" class ="Buttons">Reisen</a>
         </div>
-           
+           <hr class="tr0">
     </header>
     <main>
-
-        <h2>Das Wetter für heute</h2>
-        <p >Platzhalter </p>
-        <img src="Confused Travolta.gif"alt="Bild nicht geladen">
+        <div class="weather">
+            <h2 class ="city"> </h2>
+        </div>
+        <div class="temp"> </div>
+        
+        <img src ="" alt "" class ="icon"> 
+        <div class="description"></div>
+        
+        
+        
+        <div class="humidity"></div>
+        <div class="wind"></div>
+        
 
     </main>
     <footer class="footer">
