@@ -1,5 +1,6 @@
 /* eslint-disable prefer-const */
 /* eslint-disable no-unused-vars */
+
 let weather = {
     apiKey: "6c4ef8e4b1573b5a4e530dca1de62fab",
     // eslint-disable-next-line quote-props
