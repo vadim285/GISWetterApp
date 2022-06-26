@@ -12,7 +12,7 @@ const app = express();
 const dbURI = "mongodb+srv://vadim:vadim@User.du5cr.mongodb.net/User-data?retryWrites=true&w=majority";
 
 const mongoose = require("mongoose");
-const User = require("./public/styles/js/models/user.cjs");
+
 
 mongoose.connect(dbURI)
     .then((result)=>console.log("connected to Mongodb"))
