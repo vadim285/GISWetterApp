@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "text.js",
-  "type":  "module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +14,8 @@
     "eslint-config-google": "^0.14.0"
   },
   "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
     "mongodb": "^4.6.0",
     "mongoose": "^6.3.4",
     "requirejs": "^2.3.6"

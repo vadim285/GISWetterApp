@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="/public/styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="WetterClone">
+    <meta name="author" content="Vadim Borejko">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap" rel="stylesheet">
+    <script src="/public/styles/js/scripts.js"defer></script>
+    <title>WetterClone</title>
+</head>
+<body>
+    <header>
+        <div class="rahmen">
+            <h1 id="headline"> <span> Wetter.com-Clone </span></h1>
+        <label id="suche">Ort suchen <input type="text"class="searchbar"></label>
+        <button class="submit"type="submit">Eingabe</button>
+        <hr class="tr0">
+        </div>
+        <div class="button-group">
+                <a href="Ihr_Wetter.ejs" target=" self" class="Buttons">Ihr Wetter</a>
+                <a href="Wetterkarte.ejs" target=" self" class="Buttons">Wetterkarte</a>
+                <a href="HD_Live_Webcam.ejs" target=" self" class="Buttons">HD Live Webcam</a>
+                <a href="News_u_videos.ejs" target=" self" class="Buttons">News u. Videos</a>
+                <a href="reisen.ejs" target="self" class ="Buttons">Reisen</a>
+        </div>
+           <hr class="tr0">
+    </header>
+    <main>
+        <div class="weather">
+            <h2 class ="city"> </h2>
+        </div>
+        <div class="temp"> </div>
+        
+        <img src ="" alt "" class ="icon"> 
+        <div class="description"></div>
+        
+        
+        
+        <div class="humidity"></div>
+        <div class="wind"></div>
+        
+
+    </main>
+    <footer class="footer">
+        <div class="divfooter">
+            <hr class="tr0">
+            <div class="links">
+                Folgen Sie der richtigen wetter.com auf</div>
+                <ul class="list-links">
+                    <li class="social-follow"><a data-label="Facebook" href="https://www.facebook.com/wettercom/" 
+                        target="_blank" title="Der wirklich richtigen wetter.com auf Facebook folgen"
+                        aria-label="Der wirklich richtigen wetter.com auf Facebook folgen"
+                        rel="nofollow noopener">
+                        <img class="mb" width="40" height="40" src="https://cs3.wettercomassets.com/wcomv5/images/footer/facebook.png"
+                        alt="Der wirklich richtigen wetter.com auf Facebook folgen" 
+                        title="Der wirklich richtigen wetter.com auf Facebook folgen">
+                        <span class="hide"><br>Facebook</span></a>
+                    </li>
+                    <li class="social-follow"><a data-label="Twitter" href="https://twitter.com/wettercom/" 
+                        target="_blank" title="Der wirklich richtigen wetter.com auf Twitter folgen"
+                        aria-label="Der wirklich richtigen wetter.com auf Twitter folgen"
+                        rel="nofollow noopener">
+                        <img class="mb" width="40" height="40" src="https://cs3.wettercomassets.com/wcomv5/images/footer/twitter.png"
+                        alt="Der wirklich richtigen wetter.com auf Twitter folgen" 
+                        title="Der wirklich richtigen wetter.com auf Twitter folgen">
+                        <span class="hide"><br>Twitter</span></a>
+                    </li>
+                    <li class="social-follow"><a data-label="Instagram" href="https://www.instagram.com/wettercom/"
+                        target="_blank" title="Der wirklich richtigen wetter.com auf Instagram folgen"
+                        aria-label="Der wirklich richtigen wetter.com auf Instagram folgen"
+                        rel="nofollow noopener">
+                        <img class="mb" width="40" height="40" src="https://cs3.wettercomassets.com/wcomv5/images/footer/instagram.png"
+                        alt="Der wirklich richtigen wetter.com auf Instagram folgen" 
+                        title="Der wirklich richtigen wetter.com auf Instagram folgen">
+                        <span class="hide"><br>Instagram</span></a>
+
+                    </li>
+                </ul>
+            </div>
+            <hr class="tr0">
+            <h3>Reserviert</h3>
+            <a href="about.ejs" target="_self" title="About">About</a>
+        </div>
+        
+    </footer>
+    
+</body>
+</html>
