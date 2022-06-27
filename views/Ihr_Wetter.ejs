@@ -19,8 +19,7 @@
                 <label id="Name">Name <input type="text"class="name" name="name" required></label>
                 <label id="Password">Passwort <input type="text"class="Password" name="passwort" required></label>
                 <button class="submit"type="submit">Eingabe</button>
-                <p><%=username%></p> 
-                
+                <p><%=username%></p>    
             </form>
         
         
@@ -38,18 +37,21 @@
            <hr class="tr0">
     </header>
     <main>
-        <div class="weather">
-            <h2 class ="city"> </h2>
+        <div id="currentweather">
+            <div class="weather">
+                <h2 class ="city"> </h2>
+            </div>
+            <div class="temp"> </div>
+        
+            <img src ="" alt "" class ="icon"> 
+            <div class="description"></div>
+        
+        
+        
+            <div class="humidity"></div>
+            <div class="wind"></div>
         </div>
-        <div class="temp"> </div>
         
-        <img src ="" alt "" class ="icon"> 
-        <div class="description"></div>
-        
-        
-        
-        <div class="humidity"></div>
-        <div class="wind"></div>
         
     </main>
     <footer class="footer">

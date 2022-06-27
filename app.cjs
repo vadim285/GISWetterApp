@@ -37,7 +37,7 @@ app.get("/register.ejs", (req, res) => {
 
 
 app.get("/Ihr_Wetter.ejs", (req, res) => {
-    res.render("Ihr_Wetter",{username});
+    res.render("Ihr_Wetter", {username});
 });
 
 app.get("/index.ejs", (req, res) => {
@@ -47,12 +47,12 @@ app.get("/about-us", (req, res)=>{
     res.redirect("/about");
 });
 app.post("/register.ejs", (req, res)=>{
-   User.exists({name: req.body.name},function(err, doc){
+   User.exists({name: req.body.name}, function(err, doc){
     if (err){
-        console.log(err,"  Nutzer breits vorhanden");
+        console.log(err, "  Nutzer breits vorhanden");
     } else {
-        console.log("Result: ", doc,"  Nutzererstellbar"); //User does not Exist
-        if(doc == null){
+ // User does not Exist
+        if (doc == null){
             const user = new User(req.body);
             user.save()
             .then((result)=>{
@@ -65,13 +65,13 @@ app.post("/register.ejs", (req, res)=>{
 app.post("/Ihr_Wetter.ejs", (req, res)=>{
     const userpass = req.body.passwort;
     const username = req.body.name;
-    User.exists({name: username, passwort: userpass},function(err, doc){
+    User.exists({name: username, passwort: userpass}, function(err, doc){
         if (err){
             console.log(err);
         } else {
-            console.log("Result: ", doc); //does Exist
-            if(doc!=null){
-                res.render("Ihr_Wetter",{username: "Angemeldeter Nutzer: "+username});
+            console.log("Result: ", doc); // does Exist
+            if (doc!=null){
+                res.render("Ihr_Wetter", {username: "Angemeldeter Nutzer: "+username});
                 
             }
         }
