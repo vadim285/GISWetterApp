@@ -73,7 +73,7 @@ app.post("/Ihr_Wetter.ejs", (req, res)=>{
             if (doc != null) {
                 res.render("Ihr_Wetter", { username: "Angemeldeter Nutzer: " + username });
             }else if(doc == null && req.body != null) {
-                res.render("Ihr_Wetter", { username: "falsches Passwort oder Namen einegeben " });
+                res.render("Ihr_Wetter", { username: "falsches Passwort oder Namen eingegeben " });
             }
         }
     });
