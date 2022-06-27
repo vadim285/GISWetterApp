@@ -28,7 +28,7 @@ main{
     align-content: center;
     justify-content: space-around;
     align-items: flex-start;
-    min-height: 50vh;
+    min-height: 30vh;
     padding-bottom: 2.5rem;
    
 }
@@ -144,7 +144,7 @@ a.Buttons:hover , a:hover{
 .footer{
     margin-right: 0px;
     right: 0px;
-    position: sticky;
+    position: relative;
     bottom:0;
     width:100%;
     overflow: hidden;

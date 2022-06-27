@@ -6,16 +6,16 @@ const mongoose = require("mongoose");
 const Schema=mongoose.Schema;
 
 const UserSchmema = new Schema({
-    Name: {
+    name: {
         type: String,
         required: true
     },
-    Passwort: {
+    passwort: {
         type: String,
         required: true
     
     },
-    Standort: {
+    ort: {
         type: String,
         required: true
     }
