@@ -20,6 +20,7 @@ header{
 }
 main{
     margin-top: 2%;
+    margin-bottom: 2%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -27,6 +28,8 @@ main{
     align-content: center;
     justify-content: space-around;
     align-items: flex-start;
+    min-height: 50vh;
+    padding-bottom: 2.5rem;
    
 }
 
@@ -138,14 +141,12 @@ a.Buttons::first-letter{
 a.Buttons:hover , a:hover{
     color: White;
 }
-footer{
+.footer{
     margin-right: 0px;
     right: 0px;
-    height:50px;
-    
+    position: sticky;
     bottom:0;
     width:100%;
-    position: absolute;
     overflow: hidden;
     text-align: center;
     background-color: var(--mybluebackground-color);

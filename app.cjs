@@ -1,11 +1,11 @@
+/* eslint-disable keyword-spacing */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable indent */
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
-const { name } = require("ejs");
-const e = require("express");
 const express = require("express");
-const username = "-";
+const username = "";
+const F = "";
 
 const app = express();
 
@@ -28,36 +28,37 @@ console.log("Server is running");
 app.get("/", (req, res) => {
     res.render("index");
 });
-app.get("/about.ejs", (req, res) => {
+app.get("/about", (req, res) => {
     res.render("about");
 });
-app.get("/register.ejs", (req, res) => {
-    res.render("register");
+app.get("/register", (req, res) => {
+    res.render("register",{F});
 });
 
 
-app.get("/Ihr_Wetter.ejs", (req, res) => {
-    res.render("Ihr_Wetter", {username});
-});
-
-app.get("/index.ejs", (req, res) => {
-    res.render("index");
+app.get("/Ihr_Wetter", (req, res) => {
+    res.render("Ihr_Wetter", { username });
 });
 app.get("/about-us", (req, res)=>{
     res.redirect("/about");
 });
 app.post("/register.ejs", (req, res)=>{
-   User.exists({name: req.body.name}, function(err, doc){
-    if (err){
-        console.log(err, "  Nutzer breits vorhanden");
+   User.exists({ name: req.body.name }, function(err, doc) {
+    if (err) {
+        
     } else {
  // User does not Exist
-        if (doc == null){
+        if (doc == null) {
             const user = new User(req.body);
             user.save()
             .then((result)=>{
-            res.redirect("/Ihr_Wetter.ejs");
+            res.redirect("Ihr_Wetter.ejs");
         });
+        }else{
+            if(doc != null) {
+                 res.render("register", { F: "Nutzer bereits vorhanden" });
+            }
+            
         }
     }
     });
@@ -65,19 +66,16 @@ app.post("/register.ejs", (req, res)=>{
 app.post("/Ihr_Wetter.ejs", (req, res)=>{
     const userpass = req.body.passwort;
     const username = req.body.name;
-    User.exists({name: username, passwort: userpass}, function(err, doc){
-        if (err){
+    User.exists({ name: username, passwort: userpass }, function(err, doc) {
+        if (err) {
             console.log(err);
         } else {
-            
-            if (doc!=null){
-                res.render("Ihr_Wetter", {username: "Angemeldeter Nutzer: "+username});
-                
-            }else if(doc==null&&req.body!=null){
-                res.render("Ihr_Wetter", {username: "falsches Passwort oder Namen einegeben "});
+            if (doc != null) {
+                res.render("Ihr_Wetter", { username: "Angemeldeter Nutzer: " + username });
+            }else if(doc == null && req.body != null) {
+                res.render("Ihr_Wetter", { username: "falsches Passwort oder Namen einegeben " });
             }
         }
-
     });
  });
 app.use((req, res)=>{
