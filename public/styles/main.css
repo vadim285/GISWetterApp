@@ -3,7 +3,7 @@
     --my-border-color:rgba(0, 255, 255, 0.591);
     --my_headline-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --mynormal-font-family:Arial, Helvetica, sans-serif;
-    --mybluebackground-color:rgba(68, 68, 236, 0.804);
+    --mybluebackground-color:rgba(68, 68, 236, 1);
     --mygenericcolor:rgba(0, 255, 255, 0.591);
 }
 html{
@@ -48,11 +48,50 @@ main{
     font-size: 28px;
 }
 #suche{
+
     position: relative;
     bottom: 2%;
     text-align: center;
     font-family: var(--mynormal-font-family)
 }
+#search input{
+    float: right;
+    padding: 6px;
+    border: none;
+    
+}
+div #submit{
+    position: relative;
+    left: 270px;
+    bottom: 30px;
+}
+#submit{
+    outline:none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius:40px;
+    background: #fff;
+    border-style: solid Green;
+    border: 2px ;
+    color:green;
+    letter-spacing:1px;
+    text-shadow:0px;
+    font-size:12px;
+    font-weight:bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    
+}
+#submit:hover{
+    color: white;
+    background:green;
+}
+
+
+  
+
+
 h1, span {
     font-family: var(--my_headline-font-family)
 }
@@ -102,14 +141,15 @@ a.Buttons::first-letter{
 a.Buttons:hover , a:hover{
     color: White;
 }
-footer{
+.footer{
     margin-right: 0px;
     right: 0px;
     
-    position:absolute;
+    
     bottom:0;
     width:100%;
-   position: static;
+    position: absolute;
+    overflow: hidden;
     text-align: center;
     background-color: var(--mybluebackground-color);
     
@@ -152,11 +192,27 @@ ul.list-links, li{
 body{
    background-color:rgba(0, 255, 255, 0.591);
 }
+
 .forecastweather {
     display: flex;
 }
 .weather{
-
+    background-color: var(--my-border-color);
+    border-style: solid;
+    border-color: black;
+}
+.forcasts {
+    margin-left: +2%;
+    background-color: var(--my-border-color);
+    border-style: solid;
+    border-color: black;
+}
+h5.uhrzeit{
+    font-size: 24px;
+    color: red;
+}
+.humidity, .wind,.description{
+    font-size: 20px;
 }
 .Centerbox{
     position: relative;

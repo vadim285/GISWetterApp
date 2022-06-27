@@ -69,12 +69,15 @@ app.post("/Ihr_Wetter.ejs", (req, res)=>{
         if (err){
             console.log(err);
         } else {
-            console.log("Result: ", doc); // does Exist
+            
             if (doc!=null){
                 res.render("Ihr_Wetter", {username: "Angemeldeter Nutzer: "+username});
                 
+            }else if(doc==null&&req.body!=null){
+                res.render("Ihr_Wetter", {username: "falsches Passwort oder Namen einegeben "});
             }
         }
+
     });
  });
 app.use((req, res)=>{

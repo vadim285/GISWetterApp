@@ -44,9 +44,9 @@ let weather = {
          weatherrow.innerHTML = data.list.map((list,idx)=>{
             if(idx <=4){
 
-                return `<div class="forcastweather${idx}">
+                return `<div class="forcasts">
                 
-                <h5 class= "Uhrzeit" > am ${data.list[idx].dt_txt}</h5>
+                <h5 class= "uhrzeit" >    am ${data.list[idx].dt_txt}</h5>
                 <div class="temp"> ${data.list[idx].main.temp}°C</div>
             
                 <img src = https://openweathermap.org/img/wn/${data.list[idx].weather[0].icon}@2x.png class ="iconforcast"> 
@@ -69,6 +69,6 @@ let weather = {
 
 };
 
-document.querySelector(".submit").addEventListener("click", function() {
+document.querySelector("#submit").addEventListener("click", function() {
     weather.search();
 });

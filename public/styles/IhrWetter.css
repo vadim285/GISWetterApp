@@ -3,7 +3,7 @@
     --my-border-color:rgba(0, 255, 255, 0.591);
     --my_headline-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --mynormal-font-family:Arial, Helvetica, sans-serif;
-    --mybluebackground-color:rgba(68, 68, 236, 0.804);
+    --mybluebackground-color:rgba(68, 68, 236, 1);
     --mygenericcolor:rgba(0, 255, 255, 0.591);
 }
 html{
@@ -19,15 +19,17 @@ header{
     text-transform: capitalize;
 }
 main{
-    margin-top: 5%;
+    margin-top: 2%;
     position: relative;
-    display: flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
    
 }
-.submit{
-    position:relative;
-    bottom:2%;
-}
+
 #headline{
     
     text-align: left;
@@ -43,11 +45,50 @@ main{
     font-size: 28px;
 }
 #suche{
+
     position: relative;
     bottom: 2%;
     text-align: center;
     font-family: var(--mynormal-font-family)
 }
+#search input{
+    float: right;
+    padding: 6px;
+    border: none;
+    
+}
+div #submit{
+    position: relative;
+    left: 4px;
+    bottom: 1px;
+}
+#submit{
+    outline:none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius:40px;
+    background: #fff;
+    border-style: solid Green;
+    border: 2px ;
+    color:green;
+    letter-spacing:1px;
+    text-shadow:0px;
+    font-size:12px;
+    font-weight:bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    
+}
+#submit:hover{
+    color: white;
+    background:green;
+}
+
+
+  
+
+
 h1, span {
     font-family: var(--my_headline-font-family)
 }
@@ -58,7 +99,6 @@ h1, span {
     z-index: -20;
     
 }
-
 .button-group{
     position: relative;
     
@@ -90,6 +130,7 @@ a{
     transition: text-decoration ;
     color: initial;
 }
+
 a.Buttons::first-letter{
     font-size: 30px;
     color: white;
@@ -101,10 +142,11 @@ footer{
     margin-right: 0px;
     right: 0px;
     
-    position:absolute;
+    
     bottom:0;
     width:100%;
-   
+   position: absolute;
+   overflow: hidden;
     text-align: center;
     background-color: var(--mybluebackground-color);
     
@@ -147,6 +189,24 @@ ul.list-links, li{
 body{
    background-color:rgba(0, 255, 255, 0.591);
 }
+
+.forecastweather {
+    display: flex;
+}
+
+.forcasts {
+    margin-left: +2%;
+    background-color: var(--my-border-color);
+    border-style: solid;
+    border-color: black;
+}
+h5.uhrzeit{
+    font-size: 24px;
+    color: red;
+}
+.humidity, .wind,.description{
+    font-size: 20px;
+}
 .Centerbox{
     position: relative;
     display: flex;
@@ -155,6 +215,13 @@ body{
     margin: 0;
     width: 50%;
     height: 50%;
+}
+form p{
+    border-style: dashed;
+    width: max-content;
+    background: darkturquoise;
+    border-radius: 68px;
+    border: double;
 }
 @media (mid-width: 50em){
     body {
