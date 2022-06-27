@@ -217,9 +217,10 @@ h5.uhrzeit{
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    margin: 0;
     width: 50%;
-    height: 50%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
 }
 @media (mid-width: 50em){
     body {
