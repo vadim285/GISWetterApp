@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable prefer-const */
 
 
@@ -22,7 +23,6 @@ let weather = {
          this.apiKey)
             .then((response)=>response.json())
             .then((data)=>this.displayWeatherforecast(data));
-            
     },
     displayWeather: function(data) {
         const { name } = data;
@@ -41,9 +41,8 @@ let weather = {
 
     displayWeatherforecast(data) {
         let weatherrow = document.querySelector(".forecastweather");
-         weatherrow.innerHTML = data.list.map((list,idx)=>{
-            if(idx <=4){
-
+        weatherrow.innerHTML = data.list.map((list, idx)=>{
+            if (idx <= 4) {
                 return `<div class="forcasts">
                 
                 <h5 class= "uhrzeit" >    am ${data.list[idx].dt_txt}</h5>
@@ -58,9 +57,8 @@ let weather = {
                 <div class="wind">Wind: ${data.list[idx].wind.speed}m/s</div>
             </div>`;
             }
-            }).join(' ');
-            console.log(data);
-                
+        }).join(" ");
+        console.log(data);
     },
     search: function() {
         this.fetchWeather(document.querySelector(".searchbar").value);

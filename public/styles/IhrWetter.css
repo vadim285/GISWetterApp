@@ -28,7 +28,7 @@ main{
     align-content: center;
     justify-content: space-around;
     align-items: flex-start;
-    min-height: 50vh;
+    min-height: 60vh;
     padding-bottom: 2.5rem;
    
 }
@@ -144,11 +144,12 @@ a.Buttons:hover , a:hover{
 .footer{
     margin-right: 0px;
     right: 0px;
-    position: sticky;
+    position: relative;
     bottom:0;
     width:100%;
     overflow: hidden;
     text-align: center;
+    
     background-color: var(--mybluebackground-color);
     
 }
@@ -165,6 +166,7 @@ footer a{
     text-decoration: none;
     font-family: var(--mynormal-font-family);
 }
+
 ul{
     display: block;
     list-style-type: disc;
