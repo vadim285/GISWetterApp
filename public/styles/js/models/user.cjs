@@ -15,7 +15,7 @@ const UserSchmema = new Schema({
         required: true
     
     },
-    Standortort: {
+    Standort: {
         type: String,
         required: true
     }
